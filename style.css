@@ -1,0 +1,62 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Root Variables ===== */
+:root {
+  --grid-column-amount: 4;
+  --burger-size: 40px;
+  --accent-clr: #ae7b3c;
+  --text-clr: #282b22;
+  --body-light-bg-clr: #fff;
+  --body-dark-bg-clr: #3d4a39;
+  scroll-behavior: smooth;
+}
+
+/* ===== Selection ===== */
+::selection {
+  background: var(--accent-clr);
+  color: #fff;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 9px;
+  background: none;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--accent-clr);
+  border-radius: 6px;
+}
+
+/* ===== Small Common Styles ===== */
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+ul {
+  list-style: none;
+}
+/* svg {
+ display: block; 
+}*/
+/* section {
+  width: 100%;
+  height: 100vh;
+  padding: 1.5em;
+} */
+
+/* ===== Body Styles ===== */
+body {
+  background-color: var(--body-light-bg-clr);
+  color: var(--text-clr);
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: clamp(14px, 10px + 1vmin, 20px);
+}
