@@ -56,7 +56,8 @@ ul {
 section {
   width: 100%;
   height: 100vh;
-  padding: 1.5em;
+  padding: 0 10px;
+  /* margin: 0 0 80px 0; */
 }
 header,
 .nav-logo-ref,
@@ -80,7 +81,7 @@ body {
   font-size: clamp(16px, 10px + 1vmin, 20px);
 }
 
-/* =====Menu===== */
+/* *===== Menu ===== */
 header {
   position: fixed;
   top: 0;
@@ -98,7 +99,7 @@ header {
   height: var(--burger-size);
 }
 
-/* =====Hamburger===== */
+/* ===== Hamburger ===== */
 #check {
   position: absolute;
   right: 1rem;
@@ -144,7 +145,7 @@ header {
   transform: rotate(-45deg);
 }
 
-/* =====Menu Nav===== */
+/* ===== Menu Nav ===== */
 nav {
   position: fixed;
   height: 100vh;
@@ -178,6 +179,7 @@ nav {
   width: 100%;
   padding: 0.5em 1em;
   transition: 0.3s;
+  font-family: var(--raleway-font);
 }
 #log-in-btn {
   border: 1px solid var(--clr-accent);
@@ -190,16 +192,12 @@ nav {
   color: var(--body-light-bg-clr);
   background: var(--accent-clr);
 }
-.nav-logo-ref:hover {
-  background: transparent;
-}
 
-/* ===== Home Section ===== */
+/* *===== Home Section ===== */
 #home {
   position: relative;
   display: block;
   padding: 0;
-  /* margin: 73px 0 0 0; */
 }
 .home-carousel {
   height: 100%;
@@ -216,18 +214,29 @@ nav {
   padding: 10px;
   text-align: center;
   color: var(--body-light-bg-clr);
-  background: no-repeat url('./assets/img/Home-carousel-2.jpg') center center;
+  /* background: no-repeat url('./assets/img/Home-carousel-2.jpg') center center; */
+
+  background: no-repeat url('./assets/img/Home-carousel-mobile-1.jpg') right -200px
+    bottom -50px;
+
+  /* background: no-repeat url('./assets/img/Home-carousel-mobile-1.jpg') center center; */
+  /* background: no-repeat url('./assets/img/Home-carousel-mobile-1.jpg') top center; */
+  background-size: cover;
 }
 .accent-btn {
-  padding: 22px 56px;
-  background: var(--accent-clr);
-  font-weight: bold;
   width: 100%;
+  padding: 22px 56px;
+  font-weight: bold;
+  font-family: var(--raleway-font);
+  letter-spacing: 1px;
+  background: var(--accent-clr);
 }
-.home-carousel-item-title {
+.home-carousel-item-title,
+.title-h2 {
   font-weight: bold;
   font-family: var(--lato-font);
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
   line-height: 120%;
 }
@@ -249,10 +258,6 @@ nav {
   align-items: center;
 }
 .home-carousel-paginator {
-  /* position: absolute;
-  left: 0;
-  bottom: 15px; */
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -284,3 +289,80 @@ nav {
   margin: 0 0 15px 0;
   opacity: 0.4;
 }
+
+/* *===== Directions Section ===== */
+#directions {
+  height: auto;
+  flex-direction: column;
+  margin: 0 0 80px 0;
+}
+.direction-card:not(:last-child) {
+  margin: 0 0 50px 0;
+}
+.directions-title {
+  margin: 80px 0 50px 0;
+}
+.direction-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-number,
+.direction-card-title {
+  font-family: var(--raleway-font);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--text-clr);
+  margin: 0 0 20px 0;
+}
+.card-number {
+  opacity: 0.5;
+}
+.direction-card-title {
+  color: var(--body-dark-bg-clr);
+  margin: 0 0 15px 0;
+}
+.card-img {
+  width: 100%;
+}
+
+/* *===== Provision Section ===== */
+#provision {
+  height: auto;
+  flex-direction: column;
+  background: var(--body-dark-bg-clr);
+}
+.provision-title {
+  margin: 80px 0 50px 0;
+  font-weight: 600;
+  font-family: var(--raleway-font);
+  font-size: 24px;
+  color: var(--body-light-bg-clr);
+}
+.provision-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 0 80px 0;
+}
+.provision-item {
+  display: grid;
+  grid-template-rows: 70px;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  padding: 1.5em 1em;
+}
+.provision-item-description {
+  align-self: baseline;
+  font-weight: 500;
+  font-family: var(--raleway-font);
+  /* font-size: 18px; */
+  line-height: 130%;
+  color: var(--body-light-bg-clr);
+  letter-spacing: 1px;
+  opacity: 0.5;
+}
+
+/* *===== About Section ===== */
